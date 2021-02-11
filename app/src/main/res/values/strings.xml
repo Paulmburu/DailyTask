@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DailyTask</string>
+    <string name="title_plan_your_day">Plan your day</string>
+    <string name="background_image">Background Image</string>
+    <string name="add_task">Add Task</string>
+    <string name="task_icon">Task Icon</string>
 </resources>
