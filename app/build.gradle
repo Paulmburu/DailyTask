@@ -40,6 +40,7 @@ dependencies {
     implementation coroutines
     implementation lifecycle
     implementation arch_libraries
+    implementation timber
     kapt librariesKapt
 
     testImplementation testLibraries
