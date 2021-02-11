@@ -15,7 +15,7 @@
     <dimen name="padding_medium">12dp</dimen>
     <dimen name="padding_small">8dp</dimen>
 
-    <dimen name="card_corner_radius">6dp</dimen>
+    <dimen name="card_corner_radius">2dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
     <dimen name="card_height">150dp</dimen>
 
