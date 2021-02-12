@@ -15,10 +15,10 @@ interface TasksDao {
     suspend fun getTasks(): List<Task>
 
     @Insert
-    fun insertTask(task: Task)
+    suspend fun insertTask(task: Task)
 
     @Delete
-    fun deleteTask(task: Task)
+    suspend fun deleteTask(task: Task)
 
     @Query("DELETE FROM tasks")
     suspend fun deleteTasks()
