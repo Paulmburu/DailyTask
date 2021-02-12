@@ -18,7 +18,7 @@ buildscript {
         def lifecycle_version = '2.1.0'
         def livedata_version = '2.2.0-rc02'
         def material_version = '1.3.0'
-        def room_version = '2.2.1'
+        def room_version = '2.2.6'
         def timberVersion = '4.7.1'
         def truth_version = '1.0'
         def work_version = '2.2.0'
