@@ -7,8 +7,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.flow.flowOn
 
-
-
 class TasksRepository(val tasksDao: TasksDao) : ITasksRepository {
 
     override fun observeTasks(): Flow<List<Task>>{
