@@ -4,4 +4,9 @@
     <string name="background_image">Background Image</string>
     <string name="add_task">Add Task</string>
     <string name="task_icon">Task Icon</string>
+    <string name="task_title">Title</string>
+    <string name="enter_task_title">Enter Task Title</string>
+    <string name="enter_task_description">Enter Task Description</string>
+    <string name="sample_time_text">00:00</string>
+    <string name="save_task">SAVE</string>
 </resources>
