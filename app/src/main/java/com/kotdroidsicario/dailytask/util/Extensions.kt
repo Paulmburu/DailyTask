@@ -5,13 +5,8 @@ import android.content.Intent
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
 
-fun String.validateTime() : String{
-    return if(this.equals("0")){
-        "00"
-    }else{
-        this
-    }
-}
+
+fun Int.validateTime() : String = "%02d".format(this)
 
 fun showSnackbar(view: View, message: String) {
     Snackbar.make(view, message, Snackbar.LENGTH_LONG).show()

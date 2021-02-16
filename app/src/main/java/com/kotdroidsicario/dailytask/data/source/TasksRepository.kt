@@ -15,6 +15,10 @@ class TasksRepository(val tasksDao: TasksDao) : ITasksRepository {
             .conflate()
     }
 
+    override suspend fun getAllTasks(): List<Task> {
+        return tasksDao.getTasks()
+    }
+
     override suspend fun insertTask(task: Task){
         tasksDao.insertTask(task)
     }
@@ -30,6 +34,7 @@ class TasksRepository(val tasksDao: TasksDao) : ITasksRepository {
 
 interface ITasksRepository {
     fun observeTasks(): Flow<List<Task>>
+    suspend fun getAllTasks(): List<Task>
     suspend fun insertTask(task: Task)
     suspend fun deleteTask(task: Task)
     suspend fun deleteAllTasks()
