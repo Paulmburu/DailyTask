@@ -55,6 +55,7 @@ dependencies {
     implementation lifecycle
     implementation arch_libraries
     implementation timber
+    implementation recyclerViewAnimators
     kapt librariesKapt
 
     testImplementation testLibraries

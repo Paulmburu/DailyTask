@@ -8,6 +8,7 @@ buildscript {
         min_sdk_version = 21
 
         // local variables (use def)
+        def activity_version = "1.2.0"
         def androidx_test_version = '1.2.0'
         def androidx_core_ktx = '1.3.2'
         def appcompat_version = '1.2.0'
@@ -22,13 +23,15 @@ buildscript {
         def timberVersion = '4.7.1'
         def truth_version = '1.0'
         def work_version = '2.2.0'
+        def wasabeef_recyclerview_animators_version = '3.0.0'
 
         base = [
                  "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
                  "androidx.core:core-ktx:$androidx_core_ktx",
                  "androidx.appcompat:appcompat:$appcompat_version",
                  "com.google.android.material:material:$material_version",
-                 "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+                 "androidx.constraintlayout:constraintlayout:$constraint_layout_version",
+                 "androidx.activity:activity-ktx:$activity_version"
         ]
         coroutines = [
                 // Coroutines
@@ -45,6 +48,11 @@ buildscript {
 
         timber = [
                 "com.jakewharton.timber:timber:$timberVersion"
+        ]
+
+        recyclerViewAnimators = [
+                //RecyclerViewAnimation
+                "jp.wasabeef:recyclerview-animators:$wasabeef_recyclerview_animators_version"
         ]
 
         librariesKapt = [
