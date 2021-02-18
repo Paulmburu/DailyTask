@@ -17,4 +17,7 @@
     <string name="delete_tasks_title">Deleting Today\'s Tasks</string>
     <string name="delete_tasks_description">Routine tasks clean up time</string>
     <string name="timeline_icon">timeline_icon</string>
+
+    <string name="backup_title">Backing up tasks</string>
+    <string name="backup_simulation">Backup simulation</string>
 </resources>
