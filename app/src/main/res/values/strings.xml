@@ -14,6 +14,6 @@
     <string name="anonymous_name">anonymous</string>
     <string name="anonymous_description">You have something to do, am not really sure what it is</string>
 
-    <string name="delete_tasks_title">Deleting Today\\'s Tasks</string>
+    <string name="delete_tasks_title">Deleting Today\'s Tasks</string>
     <string name="delete_tasks_description">Routine tasks clean up time</string>
 </resources>
