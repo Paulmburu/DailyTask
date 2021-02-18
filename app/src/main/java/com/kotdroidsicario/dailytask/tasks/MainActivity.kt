@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import com.kotdroidsicario.dailytask.DailyTaskApplication
 import com.kotdroidsicario.dailytask.R
 import com.kotdroidsicario.dailytask.data.source.TasksRepository
-import com.kotdroidsicario.dailytask.preferences.DailyTaskPreferences
 import com.kotdroidsicario.dailytask.tasks.adapters.TasksAdapter
 import com.kotdroidsicario.dailytask.util.navigateTo
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
