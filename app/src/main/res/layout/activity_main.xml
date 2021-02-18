@@ -15,7 +15,7 @@
         app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/background_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/background_image"
@@ -45,6 +45,7 @@
         android:layout_margin="@dimen/fab_margin"
         android:backgroundTint="?colorSecondary"
         android:clickable="true"
+        android:onClick="navigateToAddNewTask"
         android:contentDescription="@string/add_task"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"

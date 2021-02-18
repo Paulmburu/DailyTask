@@ -22,8 +22,8 @@ fun scheduleDailyTasksAlarms(
         context,
         context.getString(R.string.delete_tasks_title),
         context.getString(R.string.delete_tasks_description),
-        17,
-        14,
+        23,
+        59,
         Integer.MAX_VALUE,
         alarmManager,
         AlarmType.REAPETING

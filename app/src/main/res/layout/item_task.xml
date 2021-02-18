@@ -58,7 +58,8 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:layout_constraintStart_toEndOf="@id/task_icon_image_view"
                 app:layout_constraintTop_toBottomOf="@id/task_title_text_view"
-                tools:text="19:00 - 20:00" />
+                setTextData="@{task.time}"
+                tools:text="19:00" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

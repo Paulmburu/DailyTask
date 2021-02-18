@@ -9,7 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kotdroidsicario.dailytask.data.Task
 import com.kotdroidsicario.dailytask.databinding.ItemTaskBinding
 
-class TaskAdapter : ListAdapter<Task, RecyclerView.ViewHolder>(TaskDiffCallback()){
+class TasksAdapter(val deleteOperation: (Task) -> Unit) : ListAdapter<Task, RecyclerView.ViewHolder>(TaskDiffCallback()){
+
+    fun deleteItem(position: Int) {
+        val task = getItem(position)
+        deleteOperation(task)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return TaskViewHolder(

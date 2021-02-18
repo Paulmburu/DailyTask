@@ -1,10 +1,13 @@
 package com.kotdroidsicario.dailytask.data
 
+import android.os.Parcelable
 import androidx.annotation.NonNull
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.kotdroidsicario.dailytask.util.validateTime
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "tasks")
 data class Task(
     @PrimaryKey(autoGenerate = true)
@@ -15,11 +18,12 @@ data class Task(
     @NonNull
     val description: String,
     @NonNull
-    @ColumnInfo(name = "start")
-    val startTime: String,
+    val hours: Int,
     @NonNull
-    @ColumnInfo(name = "stop")
-    val endTime:String,
+    val minutes:Int,
     @NonNull
     val isComplete: Boolean = false
-)
+) : Parcelable {
+    val time: String
+        get() = "${hours.validateTime()}:${minutes.validateTime()}"
+}
