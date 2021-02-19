@@ -52,6 +52,7 @@ dependencies {
 
     implementation base
     implementation coroutines
+    implementation datastoresPreferences
     implementation lifecycle
     implementation arch_libraries
     implementation timber

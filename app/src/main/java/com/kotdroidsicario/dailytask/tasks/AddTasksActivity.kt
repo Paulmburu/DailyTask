@@ -12,6 +12,7 @@ import com.kotdroidsicario.dailytask.DailyTaskApplication
 import com.kotdroidsicario.dailytask.R
 import com.kotdroidsicario.dailytask.data.Task
 import com.kotdroidsicario.dailytask.data.source.TasksRepository
+import com.kotdroidsicario.dailytask.preferences.DailyTaskPreferences
 import com.kotdroidsicario.dailytask.util.navigateTo
 import com.kotdroidsicario.dailytask.util.validateTime
 import kotlinx.android.synthetic.main.activity_add_tasks.*
@@ -22,7 +23,8 @@ class AddTasksActivity : AppCompatActivity() {
 
     private val tasksViewModel by viewModels<TasksViewModel> {
         TasksViewModelFactory(
-            (applicationContext as DailyTaskApplication).taskRepository as TasksRepository
+            (applicationContext as DailyTaskApplication).taskRepository as TasksRepository,
+            DailyTaskPreferences(applicationContext)
         )
     }
 

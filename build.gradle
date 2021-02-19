@@ -14,6 +14,7 @@ buildscript {
         def appcompat_version = '1.2.0'
         def constraint_layout_version = '2.0.4'
         def coroutines_android_version = '1.4.2'
+        def datastores_prefs = '1.0.0-alpha06'
         def expresso_version = '3.2.0'
         def junit_version = '4.12'
         def lifecycle_version = '2.1.0'
@@ -44,6 +45,10 @@ buildscript {
                 "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
                 "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version",
                 "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+        ]
+
+        datastoresPreferences = [
+                "androidx.datastore:datastore-preferences:$datastores_prefs"
         ]
 
         timber = [

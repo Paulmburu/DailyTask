@@ -20,4 +20,5 @@
 
     <string name="backup_title">Backing up tasks</string>
     <string name="backup_simulation">Backup simulation</string>
+    <string name="enter_name">Enter Name</string>
 </resources>
