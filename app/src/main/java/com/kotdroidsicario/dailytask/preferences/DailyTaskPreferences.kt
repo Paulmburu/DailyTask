@@ -8,7 +8,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 
-class DailyTaskPreferences(private val context: Context) {
+class DailyTaskPreferences(private val context: Context) :
+    IDailyTaskPreferences {
 
     private val dataStore: DataStore<Preferences> = context.createDataStore(
         name = "daily_task_pref"
@@ -19,29 +20,29 @@ class DailyTaskPreferences(private val context: Context) {
         val FIRST_TIME_APP_LAUNCH = booleanPreferencesKey(name = "first_time")
     }
 
-    suspend fun saveUsername(username: String){
+    override suspend fun saveUsername(username: String){
         dataStore.edit { preferences ->
             preferences[USERNAME] = username
         }
     }
 
-    suspend fun updateFirstTimeAppLaunch(launched: Boolean){
+    override suspend fun updateFirstTimeAppLaunch(launched: Boolean){
         dataStore.edit { preferences ->
             preferences[FIRST_TIME_APP_LAUNCH] = launched
         }
     }
 
-    val getUsername: Flow<String> = dataStore.data
+    override val getUsername: Flow<String> = dataStore.data
         .map { preferences ->
             preferences[USERNAME] ?: "Anonymous"
         }
 
-    val firstTimeAppLaunchStatus: Flow<Boolean> = dataStore.data
+    override val firstTimeAppLaunchStatus: Flow<Boolean> = dataStore.data
         .map { preferences ->
             preferences[FIRST_TIME_APP_LAUNCH] ?: true
         }
 
-    suspend fun resetPrefs(){
+    override suspend fun resetPrefs(){
         saveUsername("Anonymous")
         updateFirstTimeAppLaunch(true)
     }

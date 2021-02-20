@@ -3,14 +3,16 @@ package com.kotdroidsicario.dailytask.tasks
 
 import androidx.lifecycle.*
 import com.kotdroidsicario.dailytask.data.Task
+import com.kotdroidsicario.dailytask.data.source.ITasksRepository
 import com.kotdroidsicario.dailytask.data.source.TasksRepository
 import com.kotdroidsicario.dailytask.preferences.DailyTaskPreferences
+import com.kotdroidsicario.dailytask.preferences.IDailyTaskPreferences
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class TasksViewModel(
-    private val tasksRepository: TasksRepository,
-    private val dailyTaskPreferences: DailyTaskPreferences
+    private val tasksRepository: ITasksRepository,
+    private val dailyTaskPreferences: IDailyTaskPreferences
 ) : ViewModel() {
 
     val tasksAvailable = tasksRepository.observeTasks().asLiveData()
