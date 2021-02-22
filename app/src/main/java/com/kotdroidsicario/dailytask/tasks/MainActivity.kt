@@ -2,7 +2,6 @@ package com.kotdroidsicario.dailytask.tasks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -10,19 +9,18 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.kotdroidsicario.dailytask.DailyTaskApplication
 import com.kotdroidsicario.dailytask.R
-import com.kotdroidsicario.dailytask.data.source.TasksRepository
+import com.kotdroidsicario.dailytask.data.source.ITasksRepository
 import com.kotdroidsicario.dailytask.preferences.DailyTaskPreferences
 import com.kotdroidsicario.dailytask.tasks.adapters.TasksAdapter
 import com.kotdroidsicario.dailytask.util.navigateTo
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
     private val tasksViewModel by viewModels<TasksViewModel> {
         TasksViewModelFactory(
-            (applicationContext as DailyTaskApplication).taskRepository as TasksRepository,
+            (applicationContext as DailyTaskApplication).taskRepository,
             DailyTaskPreferences(applicationContext)
         )
     }

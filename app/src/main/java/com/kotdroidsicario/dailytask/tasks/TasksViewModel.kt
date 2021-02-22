@@ -4,7 +4,6 @@ package com.kotdroidsicario.dailytask.tasks
 import androidx.lifecycle.*
 import com.kotdroidsicario.dailytask.data.Task
 import com.kotdroidsicario.dailytask.data.source.ITasksRepository
-import com.kotdroidsicario.dailytask.data.source.TasksRepository
 import com.kotdroidsicario.dailytask.preferences.DailyTaskPreferences
 import com.kotdroidsicario.dailytask.preferences.IDailyTaskPreferences
 import kotlinx.coroutines.Dispatchers
@@ -58,7 +57,7 @@ class TasksViewModel(
 }
 
 class TasksViewModelFactory(
-    private val tasksRepository: TasksRepository,
+    private val tasksRepository: ITasksRepository,
     private val dailyTaskPreferences: DailyTaskPreferences
 ) : ViewModelProvider.NewInstanceFactory() {
 

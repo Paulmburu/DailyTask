@@ -91,6 +91,8 @@ buildscript {
         ]
 
         androidTestLibraries = [
+                "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version",
                 "junit:junit:$junit_version",
                 "androidx.test:runner:$androidx_test_version",
                 "androidx.test:rules:$androidx_test_version",
