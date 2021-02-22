@@ -1,5 +1,10 @@
-# DailyTask
-Utility practice app for AAD Certification
+<h1 align="center">DailyTask</h1>
+<p align="center">
+   <a href="https://github.com/Paulmburu/DailyTask/actions"><img alt="Build Status" src="https://github.com/Paulmburu/DailyTask/workflows/Build/badge.svg"/></a>
+</p>
+<p align="center">  
+   Utility practice app for AAD Certification
+</p>
 
 # Screenshots
 |<img src="screenshots/1.png" width=200/>|<img src="screenshots/2.png" width=200/>|<img src="screenshots/3.png" width=200/>|<img src="screenshots/4.png" width=200/>|
